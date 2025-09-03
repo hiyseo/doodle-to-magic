@@ -23,7 +23,12 @@ export function ResultViewer({ result, loading, mode }: Props) {
             {loading && <p>Generating...</p>}
             {!loading && result && (
                 <>
-                    <img src={result} alt="Result" className="mx-auto h-[512px] rounded" />
+                                        <img
+                                            src={result}
+                                            alt="Result"
+                                            className="mx-auto rounded object-cover"
+                                            style={{ width: '100%', maxWidth: '512px', aspectRatio: '1 / 1', height: 'auto' }}
+                                        />
                     {mode === 'pokemon' ? (
                         <div className="flex flex-row justify-center gap-4 mt-4">
                             <button
