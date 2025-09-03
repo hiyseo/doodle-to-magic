@@ -12,7 +12,7 @@ export function PromptInput({ prompt, setPrompt, theme }: Props) {
             <input
             type="text"
             placeholder={theme === 'pokemon' ? '예시: pikachu (단어로 입력)' : '예시: castle (단어로 입력)'}
-            className={`w-96 p-2 rounded border ${theme === 'amateur' ? 'text-black' : ''}`}
+            className={`w-96 p-2 rounded border bg-white ${theme === 'amateur' ? 'text-black' : ''}`}
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             />
