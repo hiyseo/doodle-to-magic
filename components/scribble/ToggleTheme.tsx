@@ -12,7 +12,7 @@ return (
     <Toggle
         pressed={theme === 'amateur'}
         onPressedChange={() => onChange(theme === 'pokemon' ? 'amateur' : 'pokemon')}>
-        {theme === 'pokemon' ? 'Pokemon Mode' : 'Child Mode'}
+        {theme === 'pokemon' ? 'Change Mode' : 'Change Mode'}
     </Toggle>
     )
 }

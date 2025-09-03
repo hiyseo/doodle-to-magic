@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Scribble Pokemon',
-  description: 'Sketch + Prompt → Pokemon generator',
+  title: 'Doodle to Magic',
+  description: 'Sketch + Prompt → Pokemon & Childlike Image generator',
 }
 
 export default function RootLayout({
