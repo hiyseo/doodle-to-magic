@@ -51,12 +51,18 @@ export function CanvasPanel({ image, setImage, theme, mode }: Props) {
     }
 
     const endDrawing = () => {
-      if (!drawing) return
-      drawing = false
-      ctx.closePath()
-      const dataUrl = canvas.toDataURL('image/png')
-      setImage(dataUrl)
-      setHistory((prev) => [...prev, dataUrl])
+  if (!drawing) return
+  drawing = false
+  ctx.closePath()
+  // 배경을 흰색으로 강제 채우기
+  ctx.globalCompositeOperation = 'destination-over';
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // 이미지 저장
+  const dataUrl = canvas.toDataURL('image/png');
+  setImage(dataUrl);
+  setHistory((prev) => [...prev, dataUrl]);
+  ctx.globalCompositeOperation = 'source-over'; // 원래대로 복원
     }
 
     canvas.addEventListener('mousedown', startDrawing)
@@ -89,7 +95,7 @@ export function CanvasPanel({ image, setImage, theme, mode }: Props) {
     const ctx = canvas.getContext('2d')
 
     if (!ctx) return
-    
+
     const newHistory = [...history]
     newHistory.pop()
     const last = newHistory[newHistory.length - 1]
