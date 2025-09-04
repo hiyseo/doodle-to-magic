@@ -37,12 +37,12 @@ export function ResultViewer({ result, loading, mode }: Props) {
                             >
                                 이미지 저장
                             </button>
-                            <button
+                            {/* <button
                                 className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition"
                                 onClick={() => alert('OBJ 파일 저장 기능은 준비 중입니다.')}
                             >
                                 obj 파일로 저장
-                            </button>
+                            </button> */}
                         </div>
                     ) : (
                         <div className="flex justify-center mt-4">
