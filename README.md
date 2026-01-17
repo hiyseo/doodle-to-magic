@@ -1,6 +1,6 @@
 # ✏️Doodle to Magic
 
-📢 2025년 여름학기 [AIKU](https://github.com/AIKU-Official) 활동으로 진행한 프로젝트입니다 (🥉 동상 수상!!)  
+📢 2025년 여름학기 [AIKU](https://github.com/AIKU-Official) 활동으로 진행한 프로젝트입니다 (🥉 동상 수상 🥉)  
 
 **📌 vercel 링크**  
 [Doodle-to-Magic](https://doodle-to-magic.vercel.app)
